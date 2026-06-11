@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <title>Document</title>
+    <style>
+        body {
+    background-image: url("../images/calculator2.jpg"); 
+    background-size: cover;      
+    background-repeat: no-repeat;
+    background-position: center;
+}
+        #btn1 {
+            color: rgb(227, 221, 221);
+            background-color: red;
+        }
+        #btn2{
+            color: white;;
+            background-color: black;
+        }
+        .container{
+            background-color: grey;
+            /* height: 50%; */
+            width: 90%;
+            max-width: 300px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 60%;
+        }
+       
+        .bn{
+             width: 50px;
+            height: 50px;
+            font-size: 16px;
+            margin: 5px
+        }
+       
+        .curve{
+           border-radius: 10px; 
+           
+        }
+        #display{
+            width:100%;
+            height: 40px;
+            font-size: 18px;
+            text-align: right;
+        }
+        .row{
+            margin-bottom: 10px;
+            margin-right: 5px;
+        }
+        .title{
+            margin-left: 47%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+     <center><h1 class="title">Calculator Detection</h1></center> <br>
+
+      <div class="container">
+        <div class="input_box">
+      <input id="display" rows="1" cols="20" class="curve"></input>
+     </div><br>
+     
+<div class="row">
+    <div class="col-md-3">
+      <button onclick="num1('7')" class="bn">7</button>
+    </div>
+    <div class="col-md-3">
+      <button onclick="num1('8')" class="bn">8</button>
+    </div>
+    <div class="col-md-3">
+      <button onclick="num1('9')"class="bn">9</button>
+      </div>
+     <div class="col-md-3">  
+      <button onclick="num1('+')" id="btn2"class="bn">+</button></div>
+    </div> 
+
+    <div class="row">
+        <div class="col-md-3">
+      <button onclick="num1('4')" class="bn">4</button>
+        </div>
+        <div class="col-md-3">
+       <button onclick="num1('5')" class="bn">5</button>
+       </div>
+       <div class="col-md-3">
+       <button onclick="num1('6')" class="bn">6</button>
+       </div>
+       <div class="col-md-3">
+        <button onclick="num1('-')" id="btn2" class="bn">-</button>
+        </div>
+</div>
+
+    <div class="row">
+         <div class="col-md-3">
+         <button onclick="mum1('1')" class="bn">1</button>
+         </div>
+          <div class="col-md-3">
+         <button onclick="num1('2')" class="bn">2</button>
+          </div>
+           <div class="col-md-3">
+         <button onclick="num1('3')" class="bn">3</button>
+          </div>
+           <div class="col-md-3">
+         <button onclick="num1('*')" id="btn2" class="bn">*</button>
+         </div>
+    </div>
+
+    <div class="row">
+         <div class="col-md-3">
+         <button onclick="clearInterval('C')" id="btn1" class="bn">C</button>
+         </div>
+         <div class="col-md-3">
+         <button onclick="num1('0')" class="bn">0</button>
+         </div>
+         <div class="col-md-3">
+         <button onclick="equal()" id="btn2" class="bn">=</button>
+         <div class="col-md-3"></div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    let display = document.getElementById("display");
+
+    // function seven(val) {
+    // display.value += val;
+    // }
+
+    // function eight(val) {
+    // display.value += val;
+    // }
+
+    // function nine(val) {
+    // display.value += val;
+    // }
+
+    // function Add(val) {
+    // display.value += val;
+    // }
+    function num1(num)
+    {
+        display.value +=num;
+    }
+
+    function equal()
+    {
+        let dis1=document.getElementById("display").value;
+        let result=eval(dis1);
+        document.getElementById("display").value=result;
+
+    }
+
+    function clearInterval()
+    {
+        display.value ="";
+    }
+
+    
+
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
